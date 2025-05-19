@@ -1,15 +1,6 @@
-//Interface para objeto Produto
-interface Produto {
-    produto: string;
-    preco: number;
-    disponivel: boolean; 
+//Função que retorna tipos 
+function produto(produto: string, preco: number, disponivel: boolean): string {
+    return `Produto: ${produto} - Preço: ${preco} - Disponível: ${disponivel ? 'Sim' : 'Não'}`;
 }
 
-//Utilizando a interface Produto fica assim 
-function exibirProduto(produto: Produto): void {
-    console.log(`Produto - ${produto.produto}`)
-    console.log(`Preço - ${produto.preco}`)
-    console.log(`Disponível - ${produto.disponivel ? 'Sim' : 'Não'}`)
-}
-
-exibirProduto({ produto: 'Mouse', preco: 59.90, disponivel: true});
+console.log(produto('Mouse', 59.90, true));
